@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>Free CSS template by ChocoTemplates.com</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+</head>
+<body>
+<!-- Header -->
+<div id="header">
+	<div class="shell">
+		<h1 class="text-container"><a href="#">Plain Plan - Keep youy website simple</a></h1>
+		<div id="navigation">
+			<ul>
+			    <li><a href="#" class="active">Home</a></li>
+			    <li><a href="#">Help</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- Main -->
+<div id="main">
+	<div class="shell">
+		<div id="sidebar">
+			<div class="text-container">
+				<h2> Тут будет вводиться ответ</h2>
+				
+			</div>
+		</div>
+		<div id="content">
+			<div class="col">
+				<div class="post">
+					<h2>Список слов</h2>
+					<p>{{words}} </p>
+					<div class="cl">&nbsp;</div>
+				</div>
+			</div>
+		</div>
+		<div class="cl">&nbsp;</div>
+	</div>
+</div>
+<!-- End Main -->
+</body>
+</html>

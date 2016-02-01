@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Main -->
+
+<div id="content">
+	<div class="col">
+		<div class="post">
+			Правила игры
+		</div>
+	</div>
+</div>
+<!-- End Main -->
+{% endblock %}

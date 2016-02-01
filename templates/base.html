@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>Угадай статью! Вики-игра.</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" media="all" />
+</head>
+<body>
+<!-- Header -->
+<div id="header">
+	<div class="shell">
+		<h1 id="logo" class="notext"><a href="/">Викитест!</a></h1>
+		<div id="navigation">
+			<ul>
+			    <li><a href="/">Главная</a></li>
+			    <li><a href="/game">Игра</a></li>
+			    <li><a href="/help">Правила</a></li>
+			    <li></li>
+			    <li></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- Main -->
+{% block content %}{% endblock %}
+<!-- End Main -->
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Main -->
+<div id="main">
+	<div class="shell">
+		<div id="sidebar">
+			<div class="text-container">
+				<form action="" method="post" name="new_word">
+    				{{form.hidden_tag()}}
+    				<p>
+        			Please enter your word:<br>
+        			{{form.try_word(size=40)}}<br>
+    				</p>
+    				<p><input type="submit" value="Отправить"></p>
+				</form>
+				
+			</div>
+		</div>
+
+    	{% with messages = get_flashed_messages() %}
+    		{% if messages %}
+			<div class="post">
+    			{% for message in messages %}
+        			<h3><p>{{ message }} </p></h3>
+    			{% endfor %}
+			</div>
+		{% else %}
+		<div id="content">
+			<div class="col">
+				<div class="post">
+					<h2>Список слов</h2>
+					 {% for word in words %}
+						<p>{{word}}
+					{% endfor %}
+					<div class="cl">&nbsp;</div>
+				</div>
+			</div>
+		</div>
+		<div class="cl">&nbsp;</div>
+    		{% endif %}
+    	{% endwith %}
+	</div>
+</div>
+<!-- End Main -->
+{% endblock %}
