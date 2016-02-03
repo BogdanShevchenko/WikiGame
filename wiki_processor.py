@@ -5,6 +5,7 @@ import pymorphy2
 import numpy
 import wiki_good_articles as wp
 from random import randint
+import logging
 
 class LemmaTokenizer(object):#выделяем слова, без цифр, без латинницы
     tokenizer = RegexpTokenizer('[а-яА-ЯЁёіІ’їЇєЄҐґЎў]{4,}')
@@ -25,14 +26,18 @@ def make_array(num_of_pages=100, min_links=5, min_lenth=3000, max_word=1):#со�
 
 
 def give_wordlist(words_am, pages_title, labels, Arr):#Для одной из статей выводим характерные слова
+
     i = randint(0, len(pages_title)-1)
     ind = numpy.argsort(Arr[i])[-(words_am + 10):]
-    l = labels[ind]
+    l = list(labels[ind])
     title = pages_title[i]
+    logging.info( 'Step5.1: word list created' )
     for word in l:
         if (title.lower()).find(word) != -1 or word.find(title.lower()) != -1:
             l.remove(word)
+    logging.info( 'Step5.2: words == title removed' )
     l = l[-words_am:]
     with wp.shelve.open("articles", writeback = True) as d:
         del d[pages_title[i]]
+    logging.info( 'Step5.2: word is deleted from shelve' )
     return title, l
